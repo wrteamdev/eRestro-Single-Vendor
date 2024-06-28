@@ -350,7 +350,8 @@ Now, in the browser go to <a href="localhost:3000">localhost:3000</a>
                                     <img src="./assets/images/eRestro-admin-panel.png" width="1000px" />
                         </section>
                 </article>
-                <article class="docs-article" id="section-6">
+            
+                <!-- <article class="docs-article" id="section-6">
                     <h2 class="section-heading">How to Add Map API key</h2>
                     <p>1. Go to Google Cloud Platform. <a href="https://cloud.google.com/" target="_blank">Click
                             here</a></p>
@@ -372,7 +373,73 @@ Now, in the browser go to <a href="localhost:3000">localhost:3000</a>
                     <img src="./assets/images/credentials.png" width="1000px" /><br /><br />
                     <p>7. copy that key and paste in following file.</p>
                     <p>eRestro > .env > NEXT_PUBLIC_MAP_API_KEY </p>
+                </article> -->
+
+
+                <article class="docs-article" id="section-6">
+                    <h2 class="section-heading">How to Add Map API key and Configure Environment Variables</h2>
+                    <p>1. Go to Google Cloud Platform. <a href="https://cloud.google.com/" target="_blank">Click here</a></p>
+                    <p>2. Click on console.</p>
+                    <img src="./assets/images/mapAPI1.png" width="1000px" /><br /><br />
+                    <p>3. Select your Firebase Project</p>
+                    <img src="./assets/images/mapAPI2.png" width="1000px" /><br /><br />
+                    <p>4. While following this Official Documentation, you need to enable three APIs:
+                        1) Places API, 2) JavaScript Map API, and 3) Geocoding API
+                        <a href="https://developers.google.com/maps/documentation/javascript/cloud-setup" target="_blank">Official Documentation for creating API key</a>
+                    </p>
+                    <p>5. Click on Enable to enable these APIs</p>
+                    <img src="./assets/images/enableAPI.png" width="1000px" /><br /><br />
+                    <p>6. Go to Credential Tab. You will find your web API keys.</p>
+                    <img src="./assets/images/credentials.png" width="1000px" /><br /><br />
+                    <p>7. Copy that key and paste it in the following file:</p>
+                    <p>eRestro > .env > NEXT_PUBLIC_MAP_API_KEY</p>
+                <h3>Additional Environment Variables Configuration</h3>
+                <p>In addition to the Map API key, configure these environment variables in your .env file:</p>
+                
+                <p><strong>1. NEXT_PUBLIC_BASE_URL</strong></p>
+                <p>This is the base URL for your API. Obtain this from your server configuration or backend team.</p>
+                <p>https://your backend url/app/v1/api</p>
+                
+                <p><strong>2. NEXT_PUBLIC_COUNTRY_CODE</strong></p>
+                <p>Set this to your country code, e.g., "in" for India.</p>
+                
+                <p><strong>3. Firebase Configuration Values</strong></p>
+                <ul>
+                    <li>NEXT_PUBLIC_FIREBASE_APIKEY</li>
+                    <li>NEXT_PUBLIC_FIREBASE_AUTHDOMAIN</li>
+                    <li>NEXT_PUBLIC_FIREBASE_PROJECTID</li>
+                    <li>NEXT_PUBLIC_FIREBASE_STORAGEBUCKET</li>
+                    <li>NEXT_PUBLIC_FIREBASE_SENDER_ID</li>
+                    <li>NEXT_PUBLIC_FIREBASE_APPPID</li>
+                    <li>NEXT_PUBLIC_FIREBASE_MEASUREMENTID</li>
+                </ul>
+                <p>To get these values:</p>
+                <ol>
+                    <li>Go to the Firebase Console.</li>
+                    <li>Select your project.</li>
+                    <li>Click on the settings icon and select "Project settings".</li>
+                    <li>In the "General" tab, scroll down to the "Your apps" section.</li>
+                    <li>Here you will find all the required keys.</li>
+                </ol>
+                
+                <p><strong>4. NEXT_PUBLIC_SSR</strong></p>
+                <p>Set this to "false" to disable server-side rendering if not required. Adjust based on your project needs.</p>
+                
+                <p><strong>5. NEXT_PUBLIC_MAP_API_KEY</strong></p>
+                <p>You can get your Map API key from the Google Cloud Console:</p>
+                <ol>
+                    <li>Go to the Google Cloud Console.</li>
+                    <li>Create or select a project.</li>
+                    <li>Navigate to the "APIs & Services" section.</li>
+                    <li>Click on "Credentials".</li>
+                    <li>Create a new API key or use an existing one.</li>
+                </ol>
+                
+                <p>After obtaining the values, replace the placeholder text (xxxxxxxxxxxxxxxxxxxxxxxx) with the actual values in your .env file.</p>
                 </article>
+
+
+
                 <article class="docs-article" id="item-5-1">
                     <h2 class="section-heading">System Configuration Using .env file</h2>
                     <p>You can set your API URL which fetches data from the server and a link to partner registration
